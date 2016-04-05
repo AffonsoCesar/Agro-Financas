@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/md_green_100"
+    tools:context="com.example.affonso.agrofinancas.CadastroActivity">
+
+
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:src="@drawable/cadastro"
+        android:id="@+id/cabecalho"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Usuário"
+        android:ems="10"
+        android:textColor="@color/md_black_1000"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/usuario"
+        android:layout_below="@+id/cabecalho"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Senha"
+        android:ems="10"
+        android:textColor="@color/md_black_1000"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/senha"
+        android:layout_below="@+id/usuario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Confirmar Senha"
+        android:ems="10"
+        android:textColor="@color/md_black_1000"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/confSenha"
+        android:layout_below="@+id/senha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:id="@+id/botao"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/confSenha"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
