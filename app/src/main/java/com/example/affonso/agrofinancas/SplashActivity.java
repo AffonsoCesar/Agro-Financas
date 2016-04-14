@@ -17,8 +17,10 @@ public class SplashActivity extends AppCompatActivity implements Runnable{
         setContentView(R.layout.activity_splash_main);
         ocultarBarraDeNavegação();
 
+
         Handler handler = new Handler();
         handler.postDelayed(this, DELAY);
+
 
     }
     public void run() {

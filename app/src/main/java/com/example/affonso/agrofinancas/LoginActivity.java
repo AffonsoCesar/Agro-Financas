@@ -2,9 +2,12 @@ package com.example.affonso.agrofinancas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,16 +21,17 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mUsuarioLog;
     private EditText mSenhaLog;
     private Button button;
-    private Button nButton;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Login");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mUsuarioLog = (EditText) findViewById(R.id.usuarioLog);
         mSenhaLog = (EditText) findViewById(R.id.senhaLog);
@@ -56,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
             mSenhaLog.setError("Campo Vazio");
             focus = mSenhaLog;
             focus.requestFocus();
-        } else if (usuario.equalsIgnoreCase(mUsuarioLog.getText().toString()) && senha.equalsIgnoreCase("123456")) {
+        } else if (usuario.equalsIgnoreCase(mUsuarioLog.getText().toString()) && senha.equalsIgnoreCase("123")) {
             Intent i = new Intent(this, MainActivity.class);
             Bundle b = new Bundle();
             b.putString("Usuario", usuario);
@@ -64,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(i);
             Toast.makeText(this, "Usuário "+usuario+" Logado com Sucesso!", Toast.LENGTH_LONG).show();
             finish();
-        } else if (senha != ("123456")) {
+        } else if (senha != ("123")) {
             mSenhaLog.setError("Senha Inválida!");
             focus = mSenhaLog;
             focus.requestFocus();
@@ -73,5 +77,13 @@ public class LoginActivity extends AppCompatActivity {
             focus = mUsuarioLog;
             focus.requestFocus();
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), MainActivity2.class);
+        startActivityForResult(myIntent, 0);
+        finish();
+        return true;
+
     }
 }

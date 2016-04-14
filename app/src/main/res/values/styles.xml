@@ -1,14 +1,14 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/md_green_600</item>
-        <item name="colorPrimaryDark">@color/md_grey_700</item>
-        <item name="colorAccent">@color/md_green_900</item>
-        !-- Background color of buttons in the app -->
-        <item name="colorButtonNormal">#558B2F</item>
-        <item name="android:textColorHint">@color/md_red_500</item>
+        <item name="colorPrimary">@color/md_green_500</item>
+        <item name="colorPrimaryDark">@color/md_green_900</item>
+        <item name="colorAccent">@color/md_green_300</item>
+        <item name="colorButtonNormal">@color/md_green_500</item>
+        <item name="android:textColorHint">@color/md_red_200</item>
+        <item name="android:navigationBarColor">@color/md_green_500</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

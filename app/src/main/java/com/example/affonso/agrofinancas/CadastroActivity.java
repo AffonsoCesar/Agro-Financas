@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,16 +22,17 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText mSenha;
     private EditText mConfSenha;
     private Button mBotao;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
-
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Cadastro");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mUsuario = (EditText)findViewById(R.id.usuario);
         mSenha = (EditText)findViewById(R.id.senha);
@@ -84,6 +87,13 @@ public class CadastroActivity extends AppCompatActivity {
             focus = mUsuario;
             focus.requestFocus();
         }
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), MainActivity2.class);
+        startActivityForResult(myIntent, 0);
+        finish();
+        return true;
+
     }
 
 }

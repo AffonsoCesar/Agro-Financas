@@ -3,16 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grass"
+    android:background="@color/md_green_200"
     tools:context="com.example.affonso.agrofinancas.SplashActivity">
 
+    <ImageView
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="122dp"
+        android:src="@drawable/sugarcane"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Agro Finanças"
-        android:textSize="50sp"
-        android:textColor="@color/md_green_700"
-        android:layout_marginTop="26dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="48sp"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
 </RelativeLayout>
