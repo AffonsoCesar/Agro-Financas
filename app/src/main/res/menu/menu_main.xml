@@ -3,7 +3,7 @@
 
     <item
         android:title="SOBRE"
-        android:icon="@drawable/sugarcane"
+        android:icon="@drawable/matos"
         android:id="@+id/action_sobre"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:showAsAction="withText|ifRoom"

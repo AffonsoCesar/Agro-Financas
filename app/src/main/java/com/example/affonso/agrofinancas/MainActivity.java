@@ -159,5 +159,12 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void sair (View view) {
+        Intent myIntent = new Intent(this, MainActivity2.class);
+        startActivity(myIntent);
+        finish();
+    }
+
 }
 

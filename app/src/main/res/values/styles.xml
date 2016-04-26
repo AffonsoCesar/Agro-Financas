@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/md_green_500</item>
         <item name="colorPrimaryDark">@color/md_green_900</item>
-        <item name="colorAccent">@color/md_green_300</item>
+        <item name="colorAccent">@color/md_green_900</item>
         <item name="colorButtonNormal">@color/md_green_500</item>
         <item name="android:textColorHint">@color/md_red_200</item>
         <item name="android:navigationBarColor">@color/md_green_500</item>

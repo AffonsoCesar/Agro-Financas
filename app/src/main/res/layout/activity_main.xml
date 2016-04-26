@@ -1,130 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_green_50"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:titleTextColor="@color/md_white_1000" />
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/activity_horizontal_margin">
+        android:background="@color/md_green_50"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/texto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
-            android:fontFamily="casual"
-            android:text="Título"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/md_green_900"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/texto"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="90dp"
-            android:fontFamily="casual"
-            android:text="Digite o total dos seus gastos"
-            android:textColor="@color/md_green_700"
-            android:textSize="22sp" />
-
-        <EditText
-            android:id="@+id/valorGasto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            android:fontFamily="casual"
-            android:hint="Gastos"
-            android:textAlignment="center"
-            android:textColor="@color/md_black_1000" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/valorGasto"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:fontFamily="casual"
-            android:text="Digite o total dos seus ganhos"
-            android:textColor="@color/md_green_700"
-            android:textSize="22sp" />
-
-        <EditText
-            android:id="@+id/valorGanho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            android:fontFamily="casual"
-            android:foregroundGravity="center_horizontal"
-            android:hint="Ganhos"
-            android:textAlignment="center"
-            android:textColor="@color/md_black_1000" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@color/md_white_1000" />
 
         <Button
-            android:id="@+id/botao2"
-            android:layout_width="wrap_content"
+            android:layout_width="57dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/valorGanho"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="70sp"
-            android:fontFamily="casual"
-            android:text="Calcular"
+            android:layout_alignTop="@+id/texto"
+            android:layout_gravity="right"
+            android:layout_toEndOf="@+id/textView"
+            android:onClick="sair"
+            android:text="Sair"
             android:textColor="@color/md_white_1000" />
 
-        <TextView
-            android:id="@+id/resultado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/botao2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="36dp"
-            android:textColor="@color/md_black_1000"
-            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/activity_horizontal_margin">
 
-        <Button
-            android:id="@+id/buttonAddGasto"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_above="@+id/textView2"
-            android:layout_alignEnd="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:text="+"
-            android:textColor="@color/md_white_1000" />
+            <TextView
+                android:id="@+id/texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@+id/valorGasto"
+                android:fontFamily="casual"
+                android:text="Título"
+                android:textColor="@color/md_green_900"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/buttonAddGanhos"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_above="@+id/botao2"
-            android:layout_alignEnd="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:text="+"
-            android:textColor="@color/md_white_1000" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="64dp"
+                android:fontFamily="casual"
+                android:text="Digite o total dos seus gastos"
+                android:textColor="@color/md_green_700"
+                android:textSize="22sp" />
 
+            <EditText
+                android:id="@+id/valorGasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="casual"
+                android:hint="Gastos"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/md_black_1000" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valorGasto"
+                android:layout_marginTop="8dp"
+                android:fontFamily="casual"
+                android:text="Digite o total dos seus ganhos"
+                android:textColor="@color/md_green_700"
+                android:textSize="22sp" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/valorGanho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:fontFamily="casual"
+                android:foregroundGravity="center_horizontal"
+                android:hint="Ganhos"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/md_black_1000" />
+
+            <Button
+                android:id="@+id/botao2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                android:fontFamily="casual"
+                android:text="Calcular"
+                android:textColor="@color/md_white_1000"
+                android:layout_below="@+id/valorGanho"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/botao2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:textColor="@color/md_black_1000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonAddGasto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignTop="@+id/valorGasto"
+                android:layout_toStartOf="@+id/botao2"
+                android:text="+"
+                android:textColor="@color/md_white_1000" />
+
+            <Button
+                android:id="@+id/buttonAddGanhos"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_above="@+id/botao2"
+                android:layout_alignStart="@+id/buttonAddGasto"
+                android:text="+"
+                android:textColor="@color/md_white_1000" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

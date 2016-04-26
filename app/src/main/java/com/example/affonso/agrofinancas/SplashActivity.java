@@ -10,7 +10,7 @@ import android.view.View;
 
 public class SplashActivity extends AppCompatActivity implements Runnable{
 
-    private static final int DELAY = 5000;
+    private static final int DELAY = 4000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
