@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         String texto = b.getString("Usuario");
-        mTexto.setText("Olá " + texto + " seja bem vindo!");
+        mTexto.setText("Olá " + texto + " seja bem vindo(a)!");
 
         btnGasto = (Button) findViewById(R.id.buttonAddGasto);
         btnGasto.setOnClickListener(new View.OnClickListener() {
@@ -165,6 +165,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(myIntent);
         finish();
     }
-
 }
 
